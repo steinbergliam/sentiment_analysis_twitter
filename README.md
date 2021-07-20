@@ -1,4 +1,4 @@
-# sentiment_analysis_twitter
+# sentiment_analysis_profanity
  Tweets during NBA Finals
 ```
 library(rtweet)
