@@ -1,7 +1,8 @@
 ### R Assignment 4 ###
 ##### Load packages #####
-library(httpuv)
+
 library(rtweet)
+library(httpuv)
 library(httr)
 library(stringr)
 library(tidyverse)
@@ -86,3 +87,5 @@ names(NBAtweets)[93] <- "prof_confidence"
 NBA_profanity <- NBAtweets %>% # average confidence of clean tags
   filter(str_detect(profanity_type,"clean")) %>% 
   summarise(ave_conf = mean(as.numeric(prof_confidence), na.rm = TRUE))
+
+write_as_csv(NBAprofanity, "NBAprofanity.csv")
